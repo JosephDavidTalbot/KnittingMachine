@@ -82,9 +82,9 @@ module needleBed() {
     union() {
         difference() {
             protoNeedleBed();
-            translate([-gauge/2 - tolerance,-(NEEDLE_BED_DEPTH/2),-needleBedHeight]) {
+            translate([-gauge/2,-(NEEDLE_BED_DEPTH/2),-needleBedHeight]) {
                 union(){
-                    screwConnector(tolerance = tolerance);
+                    screwConnector(tolerance = tolerance*2);
                     connectorScrews();
                 }
             }

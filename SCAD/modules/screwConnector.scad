@@ -18,7 +18,7 @@ module screwConnector(top = needleBedHeight - (needleSlotHeight + 3), length = g
     difference(){
         //translate([-(length/2),-(width/2),0])
         //cube([length,width,top]);
-        linear_extrude(top+tolerance) polygon(points=[[-(length/2)-tolerance,(width/2)+tolerance],[-(length/2)-tolerance,-(width/2)-tolerance],[0,-(width/4)-tolerance],[length/2+tolerance,-(width/2-tolerance)],[length/2+tolerance,(width/2)+tolerance],[0,(width/4)+tolerance]]);
+        linear_extrude(top+tolerance) polygon(points=[[-(length/2)-tolerance,(width/2)+tolerance],[-(length/2)-tolerance,-(width/2)-tolerance],[0,-(width/4)-tolerance],[length/2+tolerance,-(width/2)-tolerance],[length/2+tolerance,(width/2)+tolerance],[0,(width/4)+tolerance]]);
         connectorScrews(length, width, tolerance);
     }
 }

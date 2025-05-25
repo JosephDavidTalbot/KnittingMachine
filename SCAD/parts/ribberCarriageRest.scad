@@ -24,7 +24,7 @@ module leftCarriageRest() {
                 frontRail(CAM_PLATE_WIDTH/2, rounded = true);
                 backRail(CAM_PLATE_WIDTH/2, rounded = true);
             }
-            translate([-gauge/2 - tolerance,-(NEEDLE_BED_DEPTH/2),-needleBedHeight]) {
+            translate([-gauge/2 ,-(NEEDLE_BED_DEPTH/2),-needleBedHeight]) {
                 difference(){
                     screwConnector();
                     connectorScrews();
@@ -58,7 +58,7 @@ module rightCarriageRest() {
                 cube([(gauge * (numNeedles-2))+(tolerance*2), BACK_COVER*2, ((screwHeadHeight + 1) * 2)], center = true);
             }
             translate([gauge*(numNeedles-1)+gauge/2,-(NEEDLE_BED_DEPTH/2),-needleBedHeight]){
-                screwConnector(tolerance = tolerance);
+                screwConnector(tolerance = tolerance*2);
                 connectorScrews();
             }
             needleBedScrews();
