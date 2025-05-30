@@ -87,7 +87,7 @@ module carriageRest() {
                 translate([-(gauge*3)/2,-NEEDLE_BED_DEPTH,-(needleBedHeight + needleSlotHeight)])
                 rotate([180,90,0])
                 linear_extrude((CAM_PLATE_WIDTH*2) + 10, center = true)
-                polygon(points = [[0,0],[-needleBedHeight,0],[0,-lastPoint]]);
+                polygon(points = [[1,1],[-needleBedHeight,0],[0,-lastPoint]]);
                 //frontAngle(CAM_PLATE_WIDTH * 2.5);
                 /*for(i = [0:ceil(CAM_PLATE_WIDTH/gauge)]) {
                    translate([-gauge*i, 0, 0])

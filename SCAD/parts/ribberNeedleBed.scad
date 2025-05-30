@@ -54,7 +54,7 @@ module frontAngle(width = gauge) {
     translate([0,-NEEDLE_BED_DEPTH,-needleBedHeight])
     rotate([180,90,0])
     linear_extrude(width + 1, center = true)
-    polygon(points = [[0,0],[-(needleBedHeight - needleSlotHeight),0],[0,-lastPoint]]);
+    polygon(points = [[1,1],[-(needleBedHeight - needleSlotHeight),0],[0,-lastPoint]]);
 }
 
 module spongeBarSpacers() {
